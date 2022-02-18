@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Hello, Ionic!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-input [(ngModel)]="data.nome" placeholder="Nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="data.email" placeholder="E-mail"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="data.senha" placeholder="Senha" type="password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-select placeholder="Curso" [(ngModel)]="data.curso">
+      <ion-select-option value="ads">Análise e Desenv. de Sistemas</ion-select-option>
+      <ion-select-option value="bcc">Ciência da Computação</ion-select-option>
+      <ion-select-option value="eng">Engenharia Civíl</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-select placeholder="Períodos" [(ngModel)]="data.periodos" multiple="true">
+      <ion-select-option value="diurno">Diurno</ion-select-option>
+      <ion-select-option value="noturno">Diurno</ion-select-option>
+      <ion-select-option value="integral">Integral</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Matriculado</ion-label>
+    <ion-checkbox colo="dark" [(ngModel)]="data.matriculado"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Ativo</ion-label>
+    <ion-toggle color="dark" [(ngModel)]="data.ativo"></ion-toggle>
+  </ion-item>
+
+  <ion-button expand="block" color="primary" (click)="confirmar()">Confirmar</ion-button>
+  <ion-button expand="block" color="warning" (click)="cancelar()">Cancelar</ion-button>
+  <ion-button expand="block" color="danger" (click)="remover()">Remover</ion-button>
+
+</ion-content>
