@@ -37,6 +37,14 @@
   </ion-item>
 
   <ion-item>
+    <ion-select placeholder="Formação" [(ngModel)]="data.formacoes" multiple="true">
+      <ion-select-option *ngFor="let formacao of formacoes" [value]="formacao">
+        {{ formacao.value }} - ({{ formacao.title }})
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
     <ion-label>Matriculado</ion-label>
     <ion-checkbox colo="dark" [(ngModel)]="data.matriculado"></ion-checkbox>
   </ion-item>
